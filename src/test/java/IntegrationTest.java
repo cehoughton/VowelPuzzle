@@ -7,7 +7,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import static org.assertj.core.api.Assertions.*;
 import static org.fluentlenium.core.filter.FilterConstructor.*;
 
-public class AppTest extends FluentTest {
+public class IntegrationTest extends FluentTest {
   public WebDriver webDriver = new HtmlUnitDriver();
   public WebDriver getDefaultDriver() {
     return webDriver;
@@ -16,6 +16,10 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
+  @Test
+     public void rootTest() {
+       goTo("http://localhost:4567");
+       assertThat(pageSource()).contains("Puzzle");
 
  }//Tests go here
 }
