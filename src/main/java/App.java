@@ -23,7 +23,7 @@ public class App {
         public static String vowelsToDashes (String sentence) {
 
         sentence = sentence.replaceAll("(?i)a", "-");
-
+        sentence = sentence.replaceAll("(?i)e", "-");
 
        return sentence;
 
