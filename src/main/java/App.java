@@ -24,6 +24,9 @@ public class App {
 
         sentence = sentence.replaceAll("(?i)a", "-");
         sentence = sentence.replaceAll("(?i)e", "-");
+        sentence = sentence.replaceAll("(?i)i", "-");
+        sentence = sentence.replaceAll("(?i)o", "-");
+        sentence = sentence.replaceAll("(?i)u", "-");
 
        return sentence;
 

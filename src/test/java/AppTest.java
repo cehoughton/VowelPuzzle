@@ -26,6 +26,13 @@ public class AppTest {
   public void vowelsToDashes_willLeaveConsonants_BDashTDash() {
     App app = new App();
     assertEquals("B-T-", app.vowelsToDashes("BaTe"));
+  }
+
+  @Test
+  public void vowelsToDashes_replaceAllVowelsWithDash_BDashTDashDashDashDash() {
+    App app = new App();
+    assertEquals("B-T----", app.vowelsToDashes("BaTeIOu"));
+
 
 
   }
