@@ -19,7 +19,24 @@ public class IntegrationTest extends FluentTest {
   @Test
      public void rootTest() {
        goTo("http://localhost:4567");
-       assertThat(pageSource()).contains("Puzzle");
+       assertThat(pageSource()).contains("Please enter a word or phrase to create a puzzle");
+  }
 
- }//Tests go here
+  @Test
+  public void puzzleCreatedTest() {
+    goTo("http://localhost:4567/");
+    fill("#inputWord").with("Believe");
+    submit(".btn");
+    assertThat(pageSource()).contains("B-l--v-");
+  }
+
+  @Test
+  public void puzzleReturnFullStringWithDashesForVowels() {
+    goTo("http://localhost:4567/");
+    fill("#inputWord").with("The Truth is Out There");
+    submit(".btn");
+    assertThat(pageSource()).contains("Th- Tr-th -s --t Th-r-");
+  }
+
+ //Tests go here
 }
