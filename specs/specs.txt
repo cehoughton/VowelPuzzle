@@ -1,0 +1,10 @@
+## For plain English specs
+
+Will replace 'a' with '-'.
+will replace 'e' with '-'.
+will replace 'i' with '-'.
+will replace 'o' with '-'.
+will replace 'u' with '-'.
+will replace all capital vowels with '-'.
+will leave consonants.
+will ignore case.
